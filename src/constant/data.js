@@ -6,8 +6,7 @@ const titles = [
   { txt: 'C', key: 'C' },
   { txt: 'D', key: 'D' },
   { txt: '未完成', key: 'uncomplete' },
-  { txt: '强制分布结果', key: 'result' },
-  { txt: '绩效审批状态', key: 'status' }
+  { txt: '强制分布结果', key: 'result' }
 ]
 
 export {

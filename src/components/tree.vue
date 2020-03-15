@@ -1,13 +1,13 @@
 <template>
   <div>
     <div v-for="item in data"
-         :key="item.id"
+         :key="item.deptId"
          class="node">
       <div class="label">
-        <span @click="toggole(item.id)"
+        <span @click="toggole(item.deptId)"
           :class="[item.expand ? 'minus' : 'plus', !show(item) ? 'hidden': '']" ></span>
-        <input type="radio" :id="item.id" name="deptName" @click="onSelect(item.id)" :checked="item.selected">
-        <label :for="item.id">{{item.deptName}}</label>
+        <input type="radio" :id="item.deptId" name="deptName" @click="onSelect(item.deptId)" :checked="item.selected">
+        <label :for="item.deptId">{{item.deptName}}</label>
       </div>
       <div class="rest" :class="{'hide' : !item.expand}" v-show="show(item)">
         <tree :data="item.children" @toggle="toggole" @onSelect="onSelect"/>

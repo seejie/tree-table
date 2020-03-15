@@ -7,9 +7,10 @@
     :updateTreeDataAfterEdit="updateTreeDataAfterEdit"
     :toggle="toggle"
     @onSelect="onSelect"
-    @afterTreeDataUpdated="afterTreeDataUpdated">
+    @onDataUpdated="onDataUpdated">
     <template slot-scope="{row}" slot="action">
       <Button type="primary" @click="confirm(row)">确认</Button>
+      <Button type="primary" @click="update(row)">更新</Button>
     </template>
   </treeTable>
 </template>
@@ -47,14 +48,17 @@ export default {
     onSelect (data) {
       console.log(data, '-----onSelect-----')
     },
-    afterTreeDataUpdated () {
-      console.log(1111, '-----afterTreeDataUpdated-----')
+    onDataUpdated () {
+      console.log('-----onDataUpdated-----')
     },
     confirm (row) {
       console.log(row, '------confirm----')
     },
     toggle (id) {
       console.log(id, '-----id-----')
+    },
+    update ({id}) {
+      console.log(id, '------update----')
     }
   }
 }
