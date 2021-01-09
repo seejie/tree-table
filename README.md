@@ -2,7 +2,7 @@
 
 ## 效果图
 
-![alt 效果图](./show.gif)
+![alt 效果图](./demo.png)
 
 ### api
 
